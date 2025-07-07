@@ -1,0 +1,408 @@
+/* Mallard Duck Theme Colors */
+:root {
+    --duck-green: #2d5016;
+    --duck-brown: #8b4513;
+    --duck-yellow: #ffd700;
+    --duck-orange: #ff8c00;
+    --duck-cream: #f5f5dc;
+    --duck-dark: #1a1a1a;
+    --duck-light: #f8f8f0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, var(--duck-green) 0%, var(--duck-brown) 100%);
+    min-height: 100vh;
+    color: var(--duck-dark);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 15px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.back-btn {
+    display: inline-block;
+    background: linear-gradient(45deg, var(--duck-green), var(--duck-brown));
+    color: var(--duck-cream);
+    padding: 8px 16px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    border: 2px solid transparent;
+    margin-bottom: 20px;
+    align-self: flex-start;
+}
+
+.back-btn:hover {
+    background: linear-gradient(45deg, var(--duck-brown), var(--duck-green));
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    border-color: var(--duck-yellow);
+    color: var(--duck-cream);
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+    padding: 20px 0;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: var(--duck-yellow);
+    text-shadow: 3px 3px 0px var(--duck-dark);
+    margin-bottom: 10px;
+    font-weight: bold;
+    text-align: center;
+    word-wrap: break-word;
+}
+
+.subtitle {
+    font-size: 1.1rem;
+    color: var(--duck-cream);
+    font-style: italic;
+    text-shadow: 1px 1px 2px var(--duck-dark);
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+p {
+    color: var(--duck-cream);
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.upload-area {
+    border: 3px dashed var(--duck-orange);
+    padding: 30px 20px;
+    text-align: center;
+    margin: 20px 0;
+    border-radius: 15px;
+    cursor: pointer;
+    background: var(--duck-light);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    border: 3px solid var(--duck-orange);
+}
+
+.upload-area:hover {
+    border-color: var(--duck-yellow);
+    background: var(--duck-cream);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+}
+
+.upload-area.dragover {
+    border-color: var(--duck-yellow);
+    background: var(--duck-cream);
+    transform: scale(1.02);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+}
+
+.upload-area p {
+    font-size: 1.1rem;
+    color: var(--duck-dark);
+    margin: 0;
+    font-weight: 500;
+}
+
+.file-label {
+    color: var(--duck-green);
+    text-decoration: underline;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+#file-list {
+    margin-top: 15px;
+    text-align: left;
+    font-size: 0.95rem;
+    color: var(--duck-dark);
+    min-height: 15px;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#file-list .file-item {
+    background: var(--duck-light);
+    border-radius: 5px;
+    padding: 8px 12px;
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    border: 1px solid var(--duck-orange);
+}
+
+#file-list .file-remove {
+    color: #c92c2c;
+    cursor: pointer;
+    margin-left: 8px;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.download-btn {
+    background: linear-gradient(45deg, var(--duck-green), var(--duck-brown));
+    color: var(--duck-cream);
+    padding: 12px 20px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    margin: 8px auto 0 auto;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    display: block;
+    position: relative;
+    overflow: hidden;
+    border: 2px solid transparent;
+    width: 100%;
+    max-width: 300px;
+}
+
+.download-btn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
+}
+
+.download-btn:hover::before {
+    left: 100%;
+}
+
+.download-btn:hover {
+    background: linear-gradient(45deg, var(--duck-brown), var(--duck-green));
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    border-color: var(--duck-yellow);
+}
+
+.download-btn:disabled {
+    background: linear-gradient(145deg, #bdc3c7, #95a5a6);
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+#result {
+    margin-top: 20px;
+    color: var(--duck-yellow);
+    font-weight: bold;
+    font-size: 1rem;
+    text-align: center;
+    text-shadow: 1px 1px 2px var(--duck-dark);
+}
+
+#page-select-area {
+    margin: 20px auto 15px auto;
+    text-align: center;
+    background: var(--duck-light);
+    border: 2px solid var(--duck-orange);
+    border-radius: 12px;
+    padding: 18px 15px 12px 15px;
+    max-width: 100%;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    transition: box-shadow 0.2s;
+}
+
+.page-range-label {
+    display: block;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--duck-dark);
+    margin-bottom: 8px;
+    letter-spacing: 0.01em;
+}
+
+.page-range-input {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid var(--duck-orange);
+    border-radius: 8px;
+    font-size: 0.95rem;
+    background: var(--duck-cream);
+    color: var(--duck-dark);
+    transition: all 0.3s ease;
+}
+
+.page-range-input:focus {
+    outline: none;
+    border-color: var(--duck-yellow);
+    box-shadow: 0 0 0 3px rgba(255, 215, 0, 0.2);
+}
+
+.page-range-helper {
+    font-size: 0.85rem;
+    color: var(--duck-dark);
+    margin-top: 6px;
+    font-style: italic;
+}
+
+/* Tablet and larger screens */
+@media (min-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+    
+    h1 {
+        font-size: 3rem;
+    }
+    
+    .subtitle {
+        font-size: 1.2rem;
+    }
+    
+    .upload-area {
+        padding: 40px;
+    }
+    
+    .download-btn {
+        width: auto;
+        padding: 12px 25px;
+        font-size: 1.1rem;
+    }
+    
+    #page-select-area {
+        margin: 24px auto 20px auto;
+        padding: 22px 18px 16px 18px;
+        max-width: 340px;
+    }
+    
+    .page-range-label {
+        font-size: 1.13em;
+        margin-bottom: 10px;
+    }
+    
+    .page-range-input {
+        padding: 12px;
+        font-size: 1rem;
+    }
+    
+    .page-range-helper {
+        font-size: 0.9rem;
+        margin-top: 8px;
+    }
+    
+    .back-btn {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+}
+
+/* Desktop and larger screens */
+@media (min-width: 1024px) {
+    .container {
+        padding: 30px;
+    }
+    
+    h1 {
+        font-size: 3.5rem;
+    }
+    
+    .subtitle {
+        font-size: 1.3rem;
+    }
+    
+    .upload-area {
+        padding: 50px;
+    }
+    
+    .upload-area:hover {
+        transform: translateY(-5px);
+    }
+}
+
+/* Touch device optimizations */
+@media (hover: none) and (pointer: coarse) {
+    .upload-area:hover {
+        transform: none;
+    }
+    
+    .download-btn:hover {
+        transform: none;
+    }
+    
+    .back-btn:hover {
+        transform: none;
+    }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+    .upload-area {
+        border-width: 4px;
+    }
+    
+    .download-btn {
+        border-width: 3px;
+    }
+    
+    #page-select-area {
+        border-width: 3px;
+    }
+    
+    .page-range-input {
+        border-width: 3px;
+    }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+    .upload-area,
+    .download-btn,
+    .back-btn {
+        transition: none;
+    }
+    
+    .upload-area:hover,
+    .download-btn:hover,
+    .back-btn:hover {
+        transform: none;
+    }
+}
+
+/* Duck Animation */
+@keyframes quack {
+    0%, 100% { transform: rotate(0deg); }
+    25% { transform: rotate(-5deg); }
+    75% { transform: rotate(5deg); }
+}
+
+h1:hover {
+    animation: quack 0.5s ease-in-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    h1:hover {
+        animation: none;
+    }
+} 

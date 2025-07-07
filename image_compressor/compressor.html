@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Image Compressor - Compress images to reduce file size">
+    <meta name="keywords" content="image compressor, compress images, reduce file size">
+    <title>171k Tool - Compressor</title>
+    <link rel="icon" type="image/png" href="../img/duck.png">
+    <link rel="apple-touch-icon" href="../img/duck.png">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <a href="../index.html" class="back-btn">← Back to Home</a>
+        <h1>Image Compressor</h1>
+        <p>Upload your images to compress them and reduce file size</p>
+        
+        <div class="upload-area" id="uploadArea">
+            <p>📁 Drag and drop images here or click to select files</p>
+            <input type="file" id="fileInput" multiple accept="image/*" style="display: none;">
+        </div>
+
+        <div class="quality-control">
+            <label for="qualitySlider">Compression Quality: <span class="quality-value" id="qualityValue">80%</span></label>
+            <input type="range" id="qualitySlider" min="1" max="100" value="80">
+            <p><small>Lower quality = smaller file size, this may reduce image quality tho</small></p>
+        </div>
+
+        <div id="results"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 

@@ -1,0 +1,276 @@
+/* Mallard Duck Theme Colors */
+:root {
+    --duck-green: #2d5016;
+    --duck-brown: #8b4513;
+    --duck-yellow: #ffd700;
+    --duck-orange: #ff8c00;
+    --duck-cream: #f5f5dc;
+    --duck-dark: #1a1a1a;
+    --duck-light: #f8f8f0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, var(--duck-green) 0%, var(--duck-brown) 100%);
+    min-height: 100vh;
+    color: var(--duck-dark);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+    padding: 20px 0;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: var(--duck-yellow);
+    text-shadow: 3px 3px 0px var(--duck-dark);
+    margin-bottom: 10px;
+    font-weight: bold;
+    word-wrap: break-word;
+}
+
+.subtitle {
+    font-size: 1.1rem;
+    color: var(--duck-cream);
+    font-style: italic;
+    text-shadow: 1px 1px 2px var(--duck-dark);
+}
+
+.tools-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    margin-bottom: 30px;
+    flex: 1;
+}
+
+.tool-card {
+    background: var(--duck-light);
+    border-radius: 15px;
+    padding: 25px;
+    text-align: center;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    border: 3px solid var(--duck-orange);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.tool-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: linear-gradient(90deg, var(--duck-green), var(--duck-brown));
+}
+
+.tool-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+    border-color: var(--duck-yellow);
+}
+
+.tool-icon {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    display: block;
+}
+
+.tool-card h3 {
+    font-size: 1.3rem;
+    color: var(--duck-green);
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.tool-card p {
+    color: var(--duck-dark);
+    margin-bottom: 20px;
+    font-size: 0.95rem;
+}
+
+.tool-link {
+    display: inline-block;
+    background: linear-gradient(45deg, var(--duck-green), var(--duck-brown));
+    color: var(--duck-cream);
+    padding: 10px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    font-size: 0.9rem;
+}
+
+.tool-link:hover {
+    background: linear-gradient(45deg, var(--duck-brown), var(--duck-green));
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    border-color: var(--duck-yellow);
+}
+
+footer {
+    text-align: center;
+    padding: 15px 0;
+    color: var(--duck-cream);
+    font-size: 1rem;
+    text-shadow: 1px 1px 2px var(--duck-dark);
+}
+
+/* Tablet and larger screens */
+@media (min-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+    
+    h1 {
+        font-size: 3rem;
+    }
+    
+    .subtitle {
+        font-size: 1.2rem;
+    }
+    
+    .tools-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
+    
+    .tool-card {
+        padding: 30px;
+    }
+    
+    .tool-icon {
+        font-size: 3rem;
+        margin-bottom: 20px;
+    }
+    
+    .tool-card h3 {
+        font-size: 1.5rem;
+        margin-bottom: 15px;
+    }
+    
+    .tool-card p {
+        font-size: 1rem;
+        margin-bottom: 25px;
+    }
+    
+    .tool-link {
+        padding: 12px 25px;
+        font-size: 1rem;
+    }
+}
+
+/* Desktop and larger screens */
+@media (min-width: 1024px) {
+    .container {
+        padding: 30px;
+    }
+    
+    h1 {
+        font-size: 3.5rem;
+    }
+    
+    .subtitle {
+        font-size: 1.3rem;
+    }
+    
+    .tools-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+        margin-bottom: 40px;
+    }
+    
+    .tool-card {
+        padding: 35px;
+    }
+    
+    .tool-card:hover {
+        transform: translateY(-10px);
+    }
+}
+
+/* Large desktop screens */
+@media (min-width: 1200px) {
+    .tools-grid {
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 1000px;
+        margin: 0 auto 40px auto;
+    }
+}
+
+/* Duck Animation */
+@keyframes quack {
+    0%, 100% { transform: rotate(0deg); }
+    25% { transform: rotate(-5deg); }
+    75% { transform: rotate(5deg); }
+}
+
+h1:hover {
+    animation: quack 0.5s ease-in-out;
+}
+
+/* Touch device optimizations */
+@media (hover: none) and (pointer: coarse) {
+    .tool-card:hover {
+        transform: none;
+    }
+    
+    .tool-link:hover {
+        transform: none;
+    }
+    
+    h1:hover {
+        animation: none;
+    }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+    .tool-card {
+        border-width: 4px;
+    }
+    
+    .tool-link {
+        border-width: 3px;
+    }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+    .tool-card,
+    .tool-link,
+    h1 {
+        transition: none;
+        animation: none;
+    }
+    
+    .tool-card:hover {
+        transform: none;
+    }
+    
+    .tool-link:hover {
+        transform: none;
+    }
+} 

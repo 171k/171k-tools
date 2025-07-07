@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="PDF Separator Tool - Extract or trim PDF pages">
+    <meta name="keywords" content="pdf separator, extract pdf pages, split pdf">
+    <title>171k Tool - PDF Separator</title>
+    <link rel="icon" type="image/png" href="../img/duck.png">
+    <link rel="apple-touch-icon" href="../img/duck.png">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/pdf-lib/dist/pdf-lib.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <a href="../index.html" class="back-btn">← Back to Home</a>
+        <h1>PDF Separator Tool</h1>
+        <p>Extract or trim your PDF file :3</p>
+        <div class="upload-area drop-area" id="drop-area">
+            <p>📄 Drag and drop PDF file here or <label for="pdf-file" class="file-label">browse</label></p>
+            <input type="file" id="pdf-file" name="pdf" accept="application/pdf" required style="display:none;" />
+            <div id="file-list"></div>
+        </div>
+        <div id="page-select-area" style="display:none;">
+            <label for="page-range" class="page-range-label">Pages to extract</label>
+            <input type="text" id="page-range" class="page-range-input" placeholder="e.g. 1-3,5" />
+            <div class="page-range-helper">Enter page numbers or ranges, e.g. <b>1-3,5</b></div>
+        </div>
+        <button id="extract-btn" class="download-btn" disabled>Extract Pages</button>
+        <div id="result"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 

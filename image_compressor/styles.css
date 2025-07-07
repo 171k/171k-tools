@@ -1,0 +1,523 @@
+/* Mallard Duck Theme Colors */
+:root {
+    --duck-green: #2d5016;
+    --duck-brown: #8b4513;
+    --duck-yellow: #ffd700;
+    --duck-orange: #ff8c00;
+    --duck-cream: #f5f5dc;
+    --duck-dark: #1a1a1a;
+    --duck-light: #f8f8f0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, var(--duck-green) 0%, var(--duck-brown) 100%);
+    min-height: 100vh;
+    color: var(--duck-dark);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 15px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.back-btn {
+    display: inline-block;
+    background: linear-gradient(45deg, var(--duck-green), var(--duck-brown));
+    color: var(--duck-cream);
+    padding: 8px 16px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    border: 2px solid transparent;
+    margin-bottom: 20px;
+    align-self: flex-start;
+}
+
+.back-btn:hover {
+    background: linear-gradient(45deg, var(--duck-brown), var(--duck-green));
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    border-color: var(--duck-yellow);
+    color: var(--duck-cream);
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+    padding: 20px 0;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: var(--duck-yellow);
+    text-shadow: 3px 3px 0px var(--duck-dark);
+    margin-bottom: 10px;
+    font-weight: bold;
+    text-align: center;
+    word-wrap: break-word;
+}
+
+.subtitle {
+    font-size: 1.1rem;
+    color: var(--duck-cream);
+    font-style: italic;
+    text-shadow: 1px 1px 2px var(--duck-dark);
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+p {
+    color: var(--duck-cream);
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.upload-area {
+    border: 3px dashed var(--duck-orange);
+    padding: 30px 20px;
+    text-align: center;
+    margin: 20px 0;
+    border-radius: 15px;
+    cursor: pointer;
+    background: var(--duck-light);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    border: 3px solid var(--duck-orange);
+}
+
+.upload-area:hover {
+    border-color: var(--duck-yellow);
+    background: var(--duck-cream);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+}
+
+.upload-area.dragover {
+    border-color: var(--duck-yellow);
+    background: var(--duck-cream);
+    transform: scale(1.02);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+}
+
+.upload-area p {
+    font-size: 1.1rem;
+    color: var(--duck-dark);
+    margin: 0;
+    font-weight: 500;
+}
+
+.quality-control {
+    margin: 20px 0;
+    background: var(--duck-light);
+    padding: 20px;
+    border-radius: 15px;
+    border: 2px solid var(--duck-orange);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.quality-control label {
+    display: block;
+    margin-bottom: 12px;
+    font-weight: 600;
+    color: var(--duck-dark);
+    font-size: 1rem;
+}
+
+.quality-control input[type="range"] {
+    width: 100%;
+    height: 8px;
+    border-radius: 5px;
+    background: var(--duck-cream);
+    outline: none;
+    margin-bottom: 12px;
+}
+
+.quality-control input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: var(--duck-green);
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    transition: all 0.2s ease;
+}
+
+.quality-control input[type="range"]::-webkit-slider-thumb:hover {
+    background: var(--duck-brown);
+    transform: scale(1.1);
+}
+
+.quality-control input[type="range"]::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: var(--duck-green);
+    cursor: pointer;
+    border: none;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.quality-value {
+    font-weight: bold;
+    color: var(--duck-green);
+    font-size: 1.1rem;
+}
+
+.quality-control small {
+    color: var(--duck-dark);
+    font-style: italic;
+    font-size: 0.9rem;
+}
+
+.download-btn {
+    background: linear-gradient(45deg, var(--duck-green), var(--duck-brown));
+    color: var(--duck-cream);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    margin: 8px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    position: relative;
+    overflow: hidden;
+    border: 2px solid transparent;
+    width: 100%;
+    max-width: 300px;
+}
+
+.download-btn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
+}
+
+.download-btn:hover::before {
+    left: 100%;
+}
+
+.download-btn:hover {
+    background: linear-gradient(45deg, var(--duck-brown), var(--duck-green));
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    border-color: var(--duck-yellow);
+}
+
+.download-btn:disabled {
+    background: linear-gradient(145deg, #bdc3c7, #95a5a6);
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+.image-preview {
+    max-width: 200px;
+    max-height: 200px;
+    border-radius: 10px;
+    margin: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    border: 2px solid var(--duck-orange);
+}
+
+.image-preview:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+
+.file-info {
+    background: var(--duck-light);
+    border-radius: 10px;
+    padding: 12px;
+    margin: 8px 0;
+    border: 2px solid var(--duck-orange);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.file-info:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+
+.file-info h3 {
+    color: var(--duck-green);
+    margin-bottom: 4px;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.file-info h4 {
+    color: var(--duck-brown);
+    margin-bottom: 4px;
+    font-size: 0.9rem;
+}
+
+.file-info p {
+    color: var(--duck-dark);
+    margin: 4px 0;
+    font-size: 0.85rem;
+}
+
+.progress {
+    width: 100%;
+    background: var(--duck-cream);
+    border-radius: 10px;
+    margin: 8px 0;
+    overflow: hidden;
+    border: 1px solid var(--duck-orange);
+}
+
+.progress-bar {
+    height: 16px;
+    background: linear-gradient(45deg, var(--duck-green), var(--duck-brown));
+    border-radius: 10px;
+    transition: width 0.3s ease;
+}
+
+/* Tablet and larger screens */
+@media (min-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+    
+    h1 {
+        font-size: 3rem;
+    }
+    
+    .subtitle {
+        font-size: 1.2rem;
+    }
+    
+    .upload-area {
+        padding: 40px;
+    }
+    
+    .quality-control {
+        padding: 25px;
+        margin: 30px 0;
+    }
+    
+    .quality-control label {
+        font-size: 1.1rem;
+        margin-bottom: 15px;
+    }
+    
+    .quality-control input[type="range"] {
+        margin-bottom: 15px;
+    }
+    
+    .quality-value {
+        font-size: 1.2rem;
+    }
+    
+    .download-btn {
+        width: auto;
+        padding: 12px 25px;
+        font-size: 1rem;
+    }
+    
+    .image-preview {
+        max-width: 250px;
+        max-height: 250px;
+        margin: 10px;
+    }
+    
+    .file-info {
+        padding: 15px;
+        margin: 10px 0;
+    }
+    
+    .file-info h3 {
+        font-size: 1.1rem;
+        margin-bottom: 5px;
+    }
+    
+    .file-info h4 {
+        font-size: 1rem;
+        margin-bottom: 5px;
+    }
+    
+    .file-info p {
+        font-size: 0.9rem;
+        margin: 5px 0;
+    }
+    
+    .progress-bar {
+        height: 20px;
+    }
+    
+    .back-btn {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+}
+
+/* Desktop and larger screens */
+@media (min-width: 1024px) {
+    .container {
+        padding: 30px;
+    }
+    
+    h1 {
+        font-size: 3.5rem;
+    }
+    
+    .subtitle {
+        font-size: 1.3rem;
+    }
+    
+    .upload-area {
+        padding: 50px;
+    }
+    
+    .upload-area:hover {
+        transform: translateY(-5px);
+    }
+    
+    .image-preview:hover {
+        transform: scale(1.05);
+    }
+    
+    .file-info:hover {
+        transform: translateY(-2px);
+    }
+}
+
+/* Touch device optimizations */
+@media (hover: none) and (pointer: coarse) {
+    .upload-area:hover {
+        transform: none;
+    }
+    
+    .download-btn:hover {
+        transform: none;
+    }
+    
+    .image-preview:hover {
+        transform: none;
+    }
+    
+    .file-info:hover {
+        transform: none;
+    }
+    
+    .back-btn:hover {
+        transform: none;
+    }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+    .upload-area {
+        border-width: 4px;
+    }
+    
+    .download-btn {
+        border-width: 3px;
+    }
+    
+    .quality-control {
+        border-width: 3px;
+    }
+    
+    .file-info {
+        border-width: 3px;
+    }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+    .upload-area,
+    .download-btn,
+    .image-preview,
+    .file-info,
+    .back-btn {
+        transition: none;
+    }
+    
+    .upload-area:hover,
+    .download-btn:hover,
+    .image-preview:hover,
+    .file-info:hover,
+    .back-btn:hover {
+        transform: none;
+    }
+}
+
+.loading {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 3px solid var(--duck-cream);
+    border-radius: 50%;
+    border-top-color: var(--duck-green);
+    animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+.success {
+    color: var(--duck-yellow);
+    font-weight: bold;
+    animation: successPulse 0.5s ease-in-out;
+}
+
+@keyframes successPulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
+
+/* Duck Animation */
+@keyframes quack {
+    0%, 100% { transform: rotate(0deg); }
+    25% { transform: rotate(-5deg); }
+    75% { transform: rotate(5deg); }
+}
+
+h1:hover {
+    animation: quack 0.5s ease-in-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    h1:hover {
+        animation: none;
+    }
+    
+    .loading {
+        animation: none;
+    }
+    
+    .success {
+        animation: none;
+    }
+} 

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="PDF Merge Tool - Combine multiple PDF files into one">
+    <meta name="keywords" content="pdf merge, combine pdf, merge pdf files">
+    <title>171k Tool - PDF Merge</title>
+    <link rel="icon" type="image/png" href="../img/duck.png">
+    <link rel="apple-touch-icon" href="../img/duck.png">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/pdf-lib/dist/pdf-lib.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <a href="../index.html" class="back-btn">← Back to Home</a>
+        <h1>PDF Merge Tool</h1>
+        <p>Combine multiple PDF files into one</p>
+        <div class="upload-area drop-area" id="drop-area">
+            <p>📄 Drag and drop PDF files here or <label for="pdf-files" class="file-label">browse</label></p>
+            <input type="file" id="pdf-files" name="pdfs" accept="application/pdf" multiple required style="display:none;" />
+            <div id="file-list"></div>
+        </div>
+        <button id="merge-btn" class="download-btn">Merge PDFs</button>
+        <div id="result"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 
