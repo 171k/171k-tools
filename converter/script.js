@@ -24,8 +24,8 @@ function updateFileList() {
 function handleFiles(selectedFiles) {
     for (const file of selectedFiles) {
         const lowerName = (file.name || '').toLowerCase();
-        const allowedMimes = ['image/webp', 'image/png', 'image/jpeg', 'image/avif', 'image/x-icon', 'image/vnd.microsoft.icon'];
-        const allowedExt = /(\.(webp|png|jpe?g|avif|ico))$/i;
+        const allowedMimes = ['image/webp', 'image/png', 'image/jpeg', 'image/avif', 'image/svg+xml', 'image/x-icon', 'image/vnd.microsoft.icon'];
+        const allowedExt = /(\.(webp|png|jpe?g|avif|svg|ico))$/i;
         if (!(allowedMimes.includes(file.type) || allowedExt.test(lowerName))) continue;
         files.push(file);
     }
@@ -130,7 +130,7 @@ async function convertImage(file, toFormat) {
                     try {
                         const ab = await blobToArrayBuffer(pngBlob);
                         const icoBlob = buildIcoFromPng(ab, size, size);
-                        const outName = file.name.replace(/\.(webp|png|jpe?g|avif|ico)$/i, '') + '.ico';
+                        const outName = file.name.replace(/\.(webp|png|jpe?g|avif|svg|ico)$/i, '') + '.ico';
                         resolve({ blob: icoBlob, outName });
                     } catch (e) {
                         reject('ICO build failed');
@@ -149,7 +149,7 @@ async function convertImage(file, toFormat) {
                     }
                     return reject('Conversion failed');
                 }
-                const outName = file.name.replace(/\.(webp|png|jpe?g|avif|ico)$/i, '') + '.' + toFormat;
+                const outName = file.name.replace(/\.(webp|png|jpe?g|avif|svg|ico)$/i, '') + '.' + toFormat;
                 resolve({blob, outName});
             }, mime, quality);
         };
