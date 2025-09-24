@@ -1,5 +1,5 @@
-// You need to include pdf-lib via CDN in index.html for this to work
-// <script src="https://unpkg.com/pdf-lib/dist/pdf-lib.min.js"></script>
+// You need to include pdf-lib via CDN in index.html for this to work :3
+// <script src="https://unpkg.com/pdf-lib/dist/pdf-lib.min.js"></script> tak function somehow
 
 const dropArea = document.getElementById('drop-area');
 const fileInput = document.getElementById('pdf-files');
@@ -11,7 +11,7 @@ let selectedFiles = [];
 function updateFileList() {
     fileListDiv.innerHTML = '';
     if (selectedFiles.length === 0) {
-        // Do not show any message when empty
+        // Dont show any message when empty
         return;
     }
     selectedFiles.forEach((file, idx) => {
@@ -20,7 +20,7 @@ function updateFileList() {
         div.innerHTML = `${file.name} <span class="file-remove" data-idx="${idx}" title="Remove">&times;</span>`;
         fileListDiv.appendChild(div);
     });
-    // Remove handler
+    // Remove da handler
     fileListDiv.querySelectorAll('.file-remove').forEach(el => {
         el.onclick = (e) => {
             const idx = parseInt(e.target.getAttribute('data-idx'));
@@ -30,7 +30,7 @@ function updateFileList() {
     });
 }
 
-// Drag and drop events
+// for drag n drop
 ['dragenter', 'dragover'].forEach(eventName => {
     dropArea.addEventListener(eventName, (e) => {
         e.preventDefault();
