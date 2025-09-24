@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Image Converter - Convert between WebP, PNG, and JPG formats">
-    <meta name="keywords" content="image converter, webp, png, jpg, format converter">
+    <meta name="description" content="Image Converter - Convert between WebP, PNG, JPG, AVIF, and ICO formats">
+    <meta name="keywords" content="image converter, webp, png, jpg, avif, ico, format converter">
     <title>171k Tool - Image Converter</title>
     <link rel="icon" type="image/png" href="../img/duck.png">
     <link rel="apple-touch-icon" href="../img/duck.png">
@@ -14,10 +14,10 @@
     <div class="container">
         <a href="../index.html" class="back-btn">← Back to Home</a>
         <h1>Image Converter</h1>
-        <p>Convert between WebP, PNG, and JPG formats</p>
+        <p>Convert between WebP, PNG, JPG, AVIF, and ICO formats</p>
         <div class="upload-area drop-area" id="drop-area">
             <p>🖼️ Drag and drop images here or <label for="image-files" class="file-label">browse</label></p>
-            <input type="file" id="image-files" name="images" accept="image/webp,image/png,image/jpeg" multiple required style="display:none;" />
+            <input type="file" id="image-files" name="images" accept="image/webp,image/png,image/jpeg,image/avif,image/x-icon,image/vnd.microsoft.icon,.ico" multiple required style="display:none;" />
             <div id="file-list"></div>
         </div>
         <div style="text-align:center; margin-bottom:18px;">
@@ -26,6 +26,8 @@
                 <button type="button" class="format-toggle active" data-format="png" aria-label="Convert to PNG">PNG</button>
                 <button type="button" class="format-toggle" data-format="jpg" aria-label="Convert to JPG">JPG</button>
                 <button type="button" class="format-toggle" data-format="webp" aria-label="Convert to WebP">WebP</button>
+                <button type="button" class="format-toggle" data-format="avif" aria-label="Convert to AVIF">AVIF</button>
+                <button type="button" class="format-toggle" data-format="ico" aria-label="Convert to ICO">ICO</button>
             </div>
             <input type="hidden" id="convert-to" value="png">
         </div>
