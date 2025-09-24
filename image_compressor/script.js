@@ -1,24 +1,19 @@
-// White Duck Theme - Image Compressor Tool JavaScript
-
-// DOM elements
+// DOM
 const uploadArea = document.getElementById('uploadArea');
 const fileInput = document.getElementById('fileInput');
 const qualitySlider = document.getElementById('qualitySlider');
 const qualityValue = document.getElementById('qualityValue');
 const results = document.getElementById('results');
 
-// Initialize the application
 document.addEventListener('DOMContentLoaded', function() {
     initializeApp();
 });
 
 function initializeApp() {
-    // Set up event listeners
     setupEventListeners();
 }
 
 function setupEventListeners() {
-    // Update quality display with smooth animation
     qualitySlider.addEventListener('input', () => {
         qualityValue.textContent = qualitySlider.value + '%';
         qualityValue.style.transform = 'scale(1.1)';
@@ -27,7 +22,7 @@ function setupEventListeners() {
         }, 150);
     });
 
-    // Handle drag and drop with enhanced visual feedback
+    // drag drop dat thang
     uploadArea.addEventListener('click', () => fileInput.click());
     
     uploadArea.addEventListener('dragover', (e) => {
@@ -55,7 +50,7 @@ function handleFiles(files) {
     
     results.innerHTML = '';
     
-    // Add loading indicator
+    // loading thingy
     const loadingDiv = document.createElement('div');
     loadingDiv.innerHTML = `
         <div style="text-align: center; padding: 20px;">
