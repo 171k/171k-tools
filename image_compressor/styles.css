@@ -36,6 +36,8 @@ body {
 .back-btn {
     display: inline-block;
     background: linear-gradient(45deg, var(--duck-green), var(--duck-brown));
+    background-color: var(--duck-brown);
+    background-clip: padding-box;
     color: var(--duck-cream);
     padding: 8px 16px;
     border-radius: 20px;
@@ -44,7 +46,7 @@ body {
     font-size: 0.9rem;
     transition: all 0.3s ease;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-    border: 2px solid transparent;
+    border: none;
     margin-bottom: 20px;
     align-self: flex-start;
 }
@@ -53,7 +55,6 @@ body {
     background: linear-gradient(45deg, var(--duck-brown), var(--duck-green));
     transform: scale(1.05);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-    border-color: var(--duck-yellow);
     color: var(--duck-cream);
 }
 
@@ -193,6 +194,8 @@ p {
 
 .download-btn {
     background: linear-gradient(45deg, var(--duck-green), var(--duck-brown));
+    background-color: var(--duck-brown);
+    background-clip: padding-box;
     color: var(--duck-cream);
     padding: 10px 20px;
     border: none;
@@ -205,7 +208,6 @@ p {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
     position: relative;
     overflow: hidden;
-    border: 2px solid transparent;
     width: 100%;
     max-width: 300px;
 }
@@ -229,7 +231,6 @@ p {
     background: linear-gradient(45deg, var(--duck-brown), var(--duck-green));
     transform: scale(1.05);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-    border-color: var(--duck-yellow);
 }
 
 .download-btn:disabled {
