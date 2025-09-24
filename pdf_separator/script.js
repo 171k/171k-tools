@@ -1,4 +1,3 @@
-// You need to include pdf-lib via CDN in index.html for this to work
 // <script src="https://unpkg.com/pdf-lib/dist/pdf-lib.min.js"></script>
 
 const dropArea = document.getElementById('drop-area');
